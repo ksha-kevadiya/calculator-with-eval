@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        .button {
+            width: 66px;
+            height: 50px;
+            margin: 5px 15px;
+            border: 2px solid rgb(36, 32, 32);
+            border-radius: 9px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- model start -->
+    <!-- Button trigger modal -->
+    <center>
+
+        <button type="button" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            CALCULATOR APPLICATION
+        </button>
+    </center>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: rgba(100, 128, 138, 0.918);">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">CALCULATOR</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="background-color: rgba(148, 201, 231, 0.918);">
+                    <!-- calculater start -->
+                    <div class="formstyle">
+                        <form name="form1">
+                                <input class="textview" name="textview"
+                                    style="width: 370px;font-size: 20px;margin: 5px 15px;border: 2px solid black;border-radius: 10px;">
+                        </form>
+                        <table>
+                            <tr>
+
+                                <td> <button class="button" type="button" value="AC" onclick="form1.textview.value = ' ' "> <b> AC</b></button> </td>
+                                <td> <button class="button" type="button" value="100" onclick="insert(100)"> 100 </button> </td>
+                                <td> <button class="button" type="button" value="%" onclick="insert('%')"> % </button> </td>
+                                <td> <button class="button" type="button" value="/" onclick="insert('/')">  / </button></td>
+                            </tr>
+
+                            <tr>
+                                <td> <button class="button" type="button" value="7" onclick="insert(7)">7</button></td>
+                                <td> <button class="button" type="button" value="8" onclick="insert(8)">8</button></td>
+                                <td> <button class="button" type="button" value="9" onclick="insert(9)">9</button></td>
+                                <td> <button class="button" type="button" value="*" onclick="insert('*')">*</button></td>
+                            </tr>
+
+                            <tr>
+                                <td> <button class="button" type="button" value="4" onclick="insert(4)">4</button></td>
+                                <td> <button class="button" type="button" value="5" onclick="insert(5)">5</button></td>
+                                <td> <button class="button" type="button" value="6" onclick="insert(6)">6</button></td>
+                                <td> <button class="button" type="button" value="-" onclick="insert('-')">-</button></td>
+                            </tr>
+
+                            <tr>
+                                <td> <button class="button" type="button" value="1" onclick="insert(1)">1</button></td>
+                                <td> <button class="button" type="button" value="2" onclick="insert(2)">2</button></td>
+                                <td> <button class="button" type="button" value="3" onclick="insert(3)">3</button></td>
+                                <td> <button class="button" type="button" value="+" onclick="insert('+')">+</button></td>
+
+                            </tr>                                                                                                                                                                                                                        
+                            <tr>
+                                <td><button class="button" type="button" value="0" onclick="insert(0)">0</button></td>
+                                <td> <button class="button" type="button" value="." onclick="insert('.')">.</button></td>
+                                <td> <button class="button" type="button" value="B" onclick="backspace()"> <b> BACK </b></button></td>
+                                <td> <button class="button" type="button" value="=" onclick="equal()">=</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- calculater end -->
+                </div>
+                <div class="modal-footer" style="background-color: rgba(39, 46, 49, 0.918);" >
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- model end -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="/calc.js"></script>
+</body>
+</html>
+
